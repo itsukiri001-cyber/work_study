@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件代理/事件委托</title>
+    <!-- 父元素系统处理子元素事件 -->
+    <!-- 因为事件会在冒泡阶段向上传播到父节点，因此可以把子节点的监听函数定义在父节点上，
+      由父节点的监听函数，统一处理多个子元素的事件 -->
+</head>
+<body>
+    <ul id="list1">
+        <li>产品1</li>
+        <li>产品2</li>
+        <li>产品3</li>
+    </ul>
+
+    <script>
+        var list1 = document.getElementById('list1')
+        list1.addEventListener('click',function(e){
+            //console.log('列表被点击了一下')
+
+            //if(e.target.tagName = 'li'){
+            //    console.log('列表被点击了一下')
+            //}
+
+            console.log(e.target.innerHTML)
+        })
+    </script>
+</body>
+</html>

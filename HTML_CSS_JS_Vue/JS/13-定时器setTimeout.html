@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器</title>
+</head>
+<body>
+    <script>
+        // var timer = setTimeout(function(){
+        //     console.log('慢了2s')
+        // },2000)
+        //clearTimeout(timer)清除计时效果
+        
+        // var name = 'kris'
+        // var user = {
+        //     name:'python',
+        //     getname:function(){
+        //        setTimeout(function(){
+        //         console.log(this.name)//this永远指向全局
+        //        },1000) 
+        //     }
+        // }
+        // user.getname()
+
+        var name = 'kris'
+        var user = {
+            name:'python',
+            getname:function(){
+                //this永远指向当前调用者
+                var that = this
+                setTimeout(function(){
+                console.log(that.name)
+               },1000) 
+            }
+        }
+        user.getname()
+
+        //另外还有setInterval方法，是每间隔相同时间，函数执行一次
+    </script>
+</body>
+</html>

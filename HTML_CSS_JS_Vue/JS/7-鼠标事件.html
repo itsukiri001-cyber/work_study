@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件类型之鼠标事件</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine ;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn1">单击这个按钮</button>
+    <button id="btn2">双击这个按钮</button>
+    <button id="btn3">鼠标按下</button>
+    <button id="btn4">鼠标抬起</button>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    
+    <script>
+        var btn1 = document.getElementById('btn1')
+        var btn2 = document.getElementById('btn2')
+        var btn3 = document.getElementById('btn3')
+        var btn4 = document.getElementById('btn4')
+        var btn5 = document.getElementsByClassName('box1')[0]
+        var btn6 = document.getElementsByClassName('box2')[0]
+        var btn7 = document.getElementsByClassName('box3')[0]
+
+
+        btn1.onclick = function(){
+            console.log('点击了')
+        }
+        btn2.ondblclick = function(){
+            console.log('双击了')
+        }
+
+        btn3.onmousedown = function(){
+            console.log('鼠标按下')
+        }
+
+        btn4.onmouseup = function(){
+            console.log('鼠标抬起')
+        }
+
+        btn5.onmousemove = function(){
+            console.log('鼠标移动')
+        }
+
+        btn6.onmouseenter = function(){
+            console.log('鼠标进入')
+        }
+
+        btn7.onmouseleave = function(){
+            console.log('鼠标离开')
+        }
+
+
+
+    </script>
+</body>
+</html>

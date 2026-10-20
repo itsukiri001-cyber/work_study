@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>test</div>
+    <div>test2</div>
+    <p class="tryMytext">我尝试下能否被替换</p>
+    <p id="testIDtag">难道可以用ID用脚本修改</p>
+
+    <script>
+        var script1 = document.getElementsByTagName('div')[0]//在控制台找到元素
+        console.log(script1)
+        script1.innerHTML = 'recheck'//这就是可以用JS操作网页
+
+        var testText = document.getElementsByClassName('tryMytext')[0]//通过类名找到元素
+        testText.innerHTML = '妈呀 真的能被修改'//修改类里的 元素内容
+
+        var testID = document.getElementById('testIDtag')
+        testID.innerHTML = '妈呀，又给我改了？'
+        
+    </script>
+</body>
+</html>

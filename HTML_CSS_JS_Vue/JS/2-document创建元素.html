@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尝试脚本创建元素</title>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        var creEle1 = document.createElement('p')//创建一个标签 常用
+        console.log(creEle1)
+        var testWen = document.createTextNode('is a crakdoile')//给标签赋值
+        console.log(testWen)
+
+        creEle1.appendChild(testWen)//标签and值（属性）融合进元素
+        console.log(creEle1)
+
+        document.body.appendChild(creEle1)//将元素（标签）装到网页里
+        
+
+
+        var Myid = document.createAttribute('id')//创建id属性 
+        Myid.value = 'root'//给id属性赋值
+        
+        creEle1.setAttributeNode(Myid)//将属性融合进元素，只有属性融合进元素才有这个方法
+        console.log(creEle1)
+
+        var container = document.getElementById('container')
+        container.appendChild(creEle1)
+
+
+
+    </script>
+
+</body>
+</html>

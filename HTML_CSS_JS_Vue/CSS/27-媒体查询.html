@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+        }
+        @media screen and (max-width:700px) {
+            .box{
+                background-color: red;
+            }  
+            .p1{
+                display: none;
+            }
+            .p2{
+                display: none;
+            }
+        }
+        @media screen and (min-width:700px) and (max-width:1400px){
+            .box{
+                background-color: green;
+            }
+            .p1{
+                display: block;
+            }
+            .p2{
+                display: none;
+            }
+        }
+        @media screen and (min-width:1400px){
+            .box{
+                background-color: blue;
+            }
+            .p1{
+                display: block;
+            }
+            .p2{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <p class="p1">仅手机不可见</p>
+    <p class="p2">仅电脑可见</p>
+</body>
+</html>

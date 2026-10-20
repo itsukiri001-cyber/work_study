@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            height: 600px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <script>
+
+        function throttle(fn, delay) {
+            var valid = true; // ✅ 开关：true=放行，false=锁住
+            return function () {
+                if (!valid) {
+                    return false; // 如果锁住了，直接走人，不往下走
+                }
+                valid = false; // 先把开关关上，锁住！
+                setTimeout(function () {
+                    fn();          // 到时间了，执行函数
+                    valid = true;  // 再把开关打开，允许下一次触发
+                }, delay)
+            }
+        }
+
+        window.onscroll = throttle(scrollHandle, 2000)
+        function scrollHandle() {
+            var scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+        }
+
+    </script>
+</body>
+</html>

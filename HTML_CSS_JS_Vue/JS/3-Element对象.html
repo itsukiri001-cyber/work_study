@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素对象</title>
+    <style>
+        .box1{
+            width: 20px;
+            height: 20px;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+
+    </style>
+</head>
+<body>
+    <p class="box1" id="id01">这是一个P标签</p>
+
+    <script>
+        var text = document.getElementById('id01')//id只能有一个 class可以有多个
+        text.id = 'id02'
+        //console.log(text)//修改元素内容
+
+        text.className = 'box2 box3'//通过JS脚本，修改class属性的值，进行CSS之间的交互
+        //console.log(text)
+
+        console.log(text.classList.add('box1'))//这个不需要打出来之前的class值
+        console.log(text.classList.remove('box2'))//这个不需要打出来之前的class值
+        
+        
+
+    </script>
+</body>
+</html>

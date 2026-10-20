@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尝试通过Element改变位置</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            
+            border: 20px solid blue;
+            padding: 60px;
+            margin: 60px;
+            background-color: bisque;
+        }
+
+        h1{
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" id="eloca"></div>
+    <h1>标签1</h1>
+    <h1>标签2</h1>
+    <h1>标签3</h1>
+    
+    <script>
+        var box = document.getElementById('eloca')
+        //1.clientWidth & clientHeight
+        console.log(box.clientWidth)//元素包含padding的客户端宽度
+        console.log(box.clientHeight)//元素包含padding的客户端高度
+
+        console.log('-------------------')
+
+        //屏幕高度
+        console.log(document.documentElement.clientHeight)
+        //console.log(document.documentElement.clientWidth)
+
+        //页面内容高度
+        console.log(document.body.clientHeight)
+        //console.log(document.body.clientWidth)
+
+
+
+
+        //2.scrollLeft & scrollTop 获取左右/上下滚动的像素个数 
+        console.log(document.documentElement.scrollTop)
+
+        console.log('-------------------')
+
+
+
+
+        //3.offsetHeight & offsetWidth 除了外边距margin不包含其他都包含
+        console.log(box.offsetWidth)//元素包含padding的客户端宽度
+        console.log(box.offsetHeight)//元素包含padding的客户端高度
+
+        
+
+
+
+
+        //4.offsetLeft & offsetTop 到父级的左/上边界
+        
+    </script>
+</body>
+</html> 

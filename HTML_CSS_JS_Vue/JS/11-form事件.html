@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form事件</title>
+</head>
+<body>
+    <form action="" id="myform" onsubmit="submitHandle()">
+        <input type="text">
+        <button id="formtest">重置</button>
+    </form>
+
+    <script>//action=""里是服务器地址
+        var myform = document.getElementById('myform')
+        var formtest = document.getElementById('formtest')
+
+        formtest.onclick = function(){
+            myform.reset()//reset清空表单
+        }
+
+        function submitHandle(){
+            console.log('想做的事')
+        }
+
+    </script>
+    
+</body>
+</html>

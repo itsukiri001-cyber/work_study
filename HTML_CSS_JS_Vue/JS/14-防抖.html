@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖测试</title>
+</head>
+
+<body>
+    <input type="text" id="search">
+    
+    <script>
+        function debounce(fn, delay) {
+            var timer = null;
+            return function () {
+                if (timer) {
+                    clearTimeout(timer)
+                }
+                timer = setTimeout(fn, delay)
+            }
+        }
+
+        function search() {
+            console.log("发请求搜索啦！")
+        }
+        // 给输入事件绑定防抖，等待500ms
+        document.querySelector('#search').oninput = debounce(search, 500)
+    </script>
+
+</body>
+</html>

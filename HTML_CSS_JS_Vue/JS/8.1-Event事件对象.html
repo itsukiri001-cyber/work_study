@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event事件对象</title>
+</head>
+<body>
+    <button id="btn1">点一下</button>
+    <a href="https://www.doubao.com/chat/38447657854784258?channel=FWJFC" id="LLM1">豆包</a>
+
+
+    <script>
+       var btn1 = document.getElementById('btn1')
+       var LLM1 = document.getElementById('LLM1')
+
+
+       btn1.onclick = function(event){
+        //console.log(event.target)
+        event.target.innerHTML = '请再点击一下'
+       }
+
+       LLM1.onclick = function(event){
+        event.preventDefault()//この関数を入れることで、URLの効果を禁止された
+        console.log('点击了')
+       }
+        
+       
+    </script>
+    
+</body>
+</html>

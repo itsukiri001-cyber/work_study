@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2级事件处理</title>
+</head>
+<body>
+    <button id="btn1">点击这个按钮啊</button>
+
+    <script>//优点：相同事件可以绑定多个函数 并且不被覆盖
+        var btn1 = document.getElementById('btn1')
+
+        btn1.addEventListener('click',function(){
+            console.log('点击了1');
+        })
+
+        btn1.addEventListener('click',function(){
+            console.log('点击了2');
+        })
+
+    </script>
+</body>
+</html>

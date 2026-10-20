@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作CSS属性</title>
+</head>
+<body>
+    <p class="box" id="box">文本没有CSS装饰</p>
+    <div id="tesdiv"></div>
+
+    <script>
+        //我要通过JS操作CSS属性//方法1 这个写法比较冷门，就像是在标签里写style属性
+        var box = document.getElementById('box')
+        box.setAttribute('style','width:200px ; height:200px ; background:red;')
+    
+        //方法2：利用元素节点的Style属性 赋值
+        var tesdiv = document.getElementById('tesdiv')//var tesdiv = document.querySelector('#tesdiv')
+        tesdiv.style.width = '600px';
+        tesdiv.style.height = '600px';
+        tesdiv.style.backgroundColor = 'red';
+
+        //方法3：cssText
+        box.style.cssText = "width:200px;height:200px;background:red;"
+    
+    
+    
+    </script>
+    
+</body>
+</html>
