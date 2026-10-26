@@ -1,0 +1,114 @@
+html{
+    font-size: 100%;
+}
+
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(218, 218, 227);
+    line-height: 2.0;
+}
+
+
+.logo{
+    height: 100px;
+    width: 100px;
+}
+
+.align-center{
+    display: block;
+    text-align: center;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-size: 30px;
+    list-style: none;
+}
+.main-nav a {
+    color: rgba(189, 12, 12, 0.61);     /* 平时：导航链接是深灰色 */
+    text-decoration: none;
+    font-size:30px;
+}
+.main-nav a:hover {
+    color: #0bd;     /* 鼠标放上去：导航链接变成亮蓝色 */
+}
+
+.page-title{
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "WenQuanYi Micro Hei", sans-serif;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.619);
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.cover{
+    background-size: cover;
+    background-position: center bottom ;
+    height: 1700px;
+}
+
+.pistyle{
+    background-image: url('../Picture/cover.jpg');
+}
+
+
+
+.Specialties{
+    font-size: large;
+}
+
+.Our-Specialties{
+    text-align: center;
+}
+
+.Specialties p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
+
+.list2{
+    text-align: center;
+    list-style: none;
+    line-height: 20px;
+}
+
+.btn{
+    text-align: center;
+    margin-bottom: 160px;
+}
+
+.btn a{
+    display: inline-block;
+    font-size: 20px;
+    background-color: rgba(2, 51, 94, 0.477);
+    color: rgb(241, 243, 245);
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+    padding: 20px;
+    
+}
+.btn a:hover{
+    background-color: rgba(13, 2, 91, 0.276);
+    rotate: -5deg;
+}
+
+.page-fooder{
+    text-align: center;
+}
+
+.info{
+    border-spacing: 0;
+    margin: 0 auto; /* ✅ 表格居中核心代码 */
+}
+
+.info th,
+.info td{
+    border-bottom: 1px solid;
+    text-align: left;
+}
